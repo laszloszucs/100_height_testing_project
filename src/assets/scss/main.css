@@ -1,0 +1,75 @@
+:root {
+  --settings-height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    border: 5px solid red;
+}
+
+body {
+    height: 100%;
+    border: 5px solid blue;
+}
+
+#app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.setting-container {
+  height: auto;
+  /* height: 300px;
+  height: var(--settings-height); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.table {
+    flex: 1 1 0;
+    height: 100%;
+    border: 5px solid green;
+    background: white;
+    display: flex;
+}
+
+.table > .dx-widget.dx-visibility-change-handler {
+  flex: 1 1 0;
+  display: flex;
+}
+
+.dx-datagrid.dx-gridbase-container.dx-datagrid-borders {
+  flex: 1 1 0;
+  display: flex;
+}
+
+.dx-datagrid-rowsview {
+  flex: 1 1 0 !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: height 1s linear;
+  -webkit-transition: height .7s ease-out;
+  -moz-transition: height .7s ease-out;
+  -ms-transition: height .7s ease-out;
+  -o-transition: height .7s ease-out;
+  transition: height .7s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  height: 0px;
+}
