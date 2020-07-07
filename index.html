@@ -1,0 +1,52 @@
+<!-- http://www.brucelawson.co.uk/2010/a-minimal-html5-document/ -->
+
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>100% Height Testing</title>
+<link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+    <div id="app">
+        <div class="buttons">
+            <button @click="isShowTableSettings=!isShowTableSettings"> 
+                {{ isShowTableSettings ? 'Hide' : 'Show' }} 
+            </button>
+        </div>
+        <transition name="fade">
+            <div :class="{ 'collapse': !isShowTableSettings }" class="settings">
+                <div class="text">
+                    <div>Table Setting 1</div>
+                    <div>Table Setting 2</div>
+                    <div>Table Setting 3</div>
+                </div>
+            </div>
+        </transition>
+        <div class="table">
+            <div class="table-settings">                
+                <div class="left-side">
+                    L
+                </div>
+                <div class="middle">
+                    Middle
+                </div>
+                <div class="right-side">
+                    Ri
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+        el: '#app',
+        data: {
+            isShowTableSettings: true
+        }
+        });
+    </script>
+</body>
+</html>
